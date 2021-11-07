@@ -1,9 +1,13 @@
 # Spring Security: Custom header based authentication
 
-This is an example illustrates how to implement authentication (and authorization) in Spring Security based on a custom HTTP header.
+This example illustrates how to implement authentication (and authorization) in Spring Security based on a custom HTTP header.
+
 In this example the custom header name is "remote-user", but could be any other header or combination of headers.
+
 The header is used as a token and the "naive" implementation just checks its existence.
+
 Authorization roles are just assigned to the user, disregarding any identity.
+
 Although the example contains the required customization, a real world application must implement the required authentication (identity verification) and add the authorization roles according to the identity.
 
 ## Running
