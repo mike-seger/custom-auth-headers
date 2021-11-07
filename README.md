@@ -22,6 +22,7 @@ $ curl -H "remote-user: blaster" http://localhost:8080/api/greeting/sdfgdf
 
 $ curl http://localhost:8080/api/greeting/sdfgdf
 {"timeStamp":"2021-11-07T14:58:24.693743","status":401,"error":"No principal provided in authentication header","path":"/api/greeting/sdfgdf"}
+
 $ curl -H "remote-user: blaster" http://localhost:8080/api/notallowed/sdfgdf
 {"timestamp":"2021-11-07T13:43:41.979+00:00","status":403,"error":"Forbidden","path":"/api/notallowed/sdfgdf"}
 
