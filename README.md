@@ -21,12 +21,15 @@ $ curl -H "remote-user: blaster" http://localhost:8080/api/greeting/sdfgdf
 {"message":"Successfully sent: sdfgdf by: UsernamePasswordAuthenticationToken [Principal=blaster, Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ANOTHER, ROLE_ADMIN]]"}
 
 $ curl http://localhost:8080/api/greeting/sdfgdf
+# missing header
 {"timeStamp":"2021-11-07T14:58:24.693743","status":401,"error":"No principal provided in authentication header","path":"/api/greeting/sdfgdf"}
 
 $ curl -H "remote-user: blaster" http://localhost:8080/api/notallowed/sdfgdf
+# missing role
 {"timestamp":"2021-11-07T13:43:41.979+00:00","status":403,"error":"Forbidden","path":"/api/notallowed/sdfgdf"}
 
 $ curl -H "remote-user: blaster" http://localhost:8080/api/wrong/sdfgdf
+# wrong path
 {"timestamp":"2021-11-07T13:44:11.377+00:00","status":404,"error":"Not Found","path":"/api/wrong/sdfgdf"}
 ```
 
