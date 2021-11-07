@@ -8,7 +8,7 @@ The header is used as a token and the "naive" implementation just checks its exi
 
 Authorization roles are just assigned to the user, disregarding any identity.
 
-Although the example contains the required customization, in order to deserve the security label, a real world application must implement the required authentication (identity verification) and add the authorization roles according to the identity.
+Although the example contains the required customization, in order to deserve the security label, a real world application must implement the required authentication (identity verification) and add the authorization roles accordingly.
 
 ## Running
 ```
