@@ -35,4 +35,5 @@ $ curl -H "remote-user: blaster" http://localhost:8080/api/wrong/sdfgdf
 
 ## Links
 [Spring Security: Authentication and Authorization In-Depth](https://www.marcobehler.com/guides/spring-security)  
+[How to secure REST with Spring Security](https://www.infoworld.com/article/3630107/how-to-secure-rest-with-spring-security.html)  
 [Custom Header based authentication using Spring example.security](https://salahuddin-s.medium.com/custom-header-based-authentication-using-spring-example.security-17f4163d0986)  
