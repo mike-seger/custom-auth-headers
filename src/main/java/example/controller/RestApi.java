@@ -16,12 +16,12 @@ public class RestApi {
 	@GetMapping(value = "/api/greeting/{input}")
 	@PreAuthorize("hasRole('ROLE_ANOTHER')")
 	public Response sendMessage(@PathVariable String input, Principal principal) {
-		return new Response("Successfully sent: "+input + " by: "+principal);
+		return new Response(principal.getName()+" successfully sent: "+input +"  principal: "+principal);
 	}
 
 	@GetMapping(value = "/api/notallowed/{input}")
 	@PreAuthorize("hasRole('ROLE_ALLOWED')")
 	public Response notAllowed(@PathVariable String input, Principal principal) {
-		return new Response("Successfully sent: "+input + " by: "+principal);
+		return new Response("This should never be successful ("+principal+")");
 	}
 }
